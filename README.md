@@ -7,7 +7,7 @@ Full Cycle Rocks!!
 
 Para executar a imagem:
 ```sh
-docker-compose up -d
+docker compose up -d
 ```
 
 Depois acessar a URL no navegador: http://localhost:8080/
