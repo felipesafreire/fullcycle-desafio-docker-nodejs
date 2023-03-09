@@ -9,12 +9,11 @@ const config = {
     database: 'nodedb'
 };
 const mysql = require('mysql');
-const connection = mysql.createConnection(config);
-const sql = `INSERT INTO people(nome) values ('${faker.name.fullName()}')`;
-connection.query(sql);   
-
 
 app.get('/', async (req, res) => {
+    const connection = mysql.createConnection(config);
+    const sql = `INSERT INTO people(nome) values ('${faker.name.fullName()}')`;
+    connection.query(sql);   
     await connection.query("SELECT nome FROM people", (err, rows) => {
         const nomesHTML = [];
         rows.forEach(item => {

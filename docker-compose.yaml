@@ -21,7 +21,7 @@ services:
     build:
       context: ./app
     container_name: app
-    command: npm run start:watch
+    command: npm run start
     networks:
       - node-network
     volumes:
